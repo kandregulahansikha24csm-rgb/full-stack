@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radha Krishna Event - DOM Project</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right,#FFF8DC,#FFDAB9);
+    text-align:center;
+}
+
+header{
+    background:#8B0000;
+    color:white;
+    padding:20px;
+}
+
+h1{
+    margin:0;
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    font-size:16px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#FF8C00;
+    color:white;
+}
+
+button:hover{
+    background:green;
+}
+
+#eventBox{
+    width:60%;
+    margin:20px auto;
+    padding:20px;
+    background:white;
+    border:3px solid #8B0000;
+    border-radius:10px;
+    display:none;
+}
+
+ul{
+    text-align:left;
+    display:inline-block;
+}
+
+img{
+    width:250px;
+    border-radius:10px;
+    margin-top:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🌸 Radha Krishna Devotional Event 🌸</h1>
+<p>Welcome to the Janmashtami Celebration</p>
+</header>
+
+<button id="showBtn">Show Event</button>
+
+<button id="hideBtn">Hide Event</button>
+
+<button id="themeBtn">Change Theme</button>
+
+<button id="addBtn">Add Devotee</button>
+
+<div id="eventBox">
+
+<h2>Janmashtami Celebration</h2>
+
+<p><b>Date:</b> 16 August 2026</p>
+
+<p><b>Time:</b> 6:00 PM</p>
+
+<p><b>Venue:</b> Radha Krishna Temple</p>
+
+<h3>Event Schedule</h3>
+
+<ul id="devoteeList">
+<li>Bhajans</li>
+<li>Krishna Leela</li>
+<li>Aarti</li>
+<li>Prasadam Distribution</li>
+</ul>
+
+<br><br>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Radha_Krishna.jpg" alt="Radha Krishna">
+
+</div>
+
+<script>
+
+// Selecting Elements using DOM
+
+let showBtn=document.getElementById("showBtn");
+let hideBtn=document.getElementById("hideBtn");
+let themeBtn=document.getElementById("themeBtn");
+let addBtn=document.getElementById("addBtn");
+let eventBox=document.getElementById("eventBox");
+let devoteeList=document.getElementById("devoteeList");
+
+// Show Event
+
+showBtn.onclick=function(){
+
+eventBox.style.display="block";
+
+}
+
+// Hide Event
+
+hideBtn.onclick=function(){
+
+eventBox.style.display="none";
+
+}
+
+// Change Theme
+
+themeBtn.onclick=function(){
+
+document.body.style.background="linear-gradient(to right,#ADD8E6,#E6E6FA)";
+document.body.style.color="darkblue";
+
+}
+
+// Add New Event
+
+addBtn.onclick=function(){
+
+let newItem=document.createElement("li");
+
+newItem.textContent="Radha Krishna Dance Performance";
+
+devoteeList.appendChild(newItem);
+
+}
+
+</script>
+
+</body>
+</html>
