@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and ID Selectors</title>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        padding: 20px;
+    }
+
+    /* ==========================================
+       1. ID SELECTOR (Uses "#" symbol)
+       ========================================== */
+    #page-header {
+        background-color: #34495e;
+        padding: 15px;
+        border-radius: 8px;
+        color: white;
+        text-align: center;
+    }
+
+    /* ==========================================
+       2. CLASS SELECTOR (Uses "." symbol)
+       ========================================== */
+    .info-box {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 15px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Class used for multiple buttons */
+    .btn-action {
+        background-color: #3498db;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+
+<header id="page-header">
+    <strong>Student Information Portal</strong>
+</header>
+
+<div class="info-box">
+    <h3>Student Profile</h3>
+    <p>View and manage your personal academic information.</p>
+    <button class="btn-action">View Profile</button>
+</div>
+
+<div class="info-box">
+    <h3>Course Details</h3>
+    <p>Check your registered courses and class schedules.</p>
+    <button class="btn-action">View Courses</button>
+</div>
+
+
+</body>
+
+</html>

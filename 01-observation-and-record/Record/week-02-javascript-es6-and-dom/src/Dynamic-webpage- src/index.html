@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>College Tech Fest Registration</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#00111a,#003344,#00111a);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:450px;
+    background:rgba(15,25,30,0.95);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 20px cyan;
+    border:2px solid #00bcd4;
+}
+
+h1{
+    text-align:center;
+    color:#00e5ff;
+    text-shadow:0 0 10px cyan;
+    margin-bottom:5px;
+}
+
+p{
+    text-align:center;
+    color:#ddd;
+    margin-bottom:20px;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:6px;
+    background:#263238;
+    color:white;
+    font-size:15px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    box-shadow:0 0 10px cyan;
+}
+
+button{
+    width:48%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    margin-top:15px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.register{
+    background:#0097a7;
+    color:white;
+}
+
+.register:hover{
+    background:#00bcd4;
+}
+
+.reset{
+    background:#444;
+    color:white;
+}
+
+.reset:hover{
+    background:#666;
+}
+
+#result{
+    display:none;
+    margin-top:20px;
+    padding:15px;
+    border-radius:10px;
+    background:#101820;
+    border:1px solid cyan;
+    animation:fade 0.5s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:scale(0.9);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.success{
+    color:#00ff99;
+    font-size:20px;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>COLLEGE TECH FEST</h1>
+
+<p>Annual Technical Event Registration</p>
+
+<input type="text" id="name" placeholder="Enter Your Name">
+
+<input type="email" id="email" placeholder="Enter Email">
+
+<select id="team">
+
+<option value="">Choose Your Team</option>
+<option>Code Masters</option>
+<option>Tech Titans</option>
+<option>Digital Innovators</option>
+<option>Future Coders</option>
+
+</select>
+
+<select id="event">
+
+<option value="">Choose Event</option>
+<option>Web Development</option>
+<option>Code Challenge</option>
+<option>Project Expo</option>
+<option>Quiz Competition</option>
+
+</select>
+
+<div style="display:flex;justify-content:space-between;">
+
+<button class="register" onclick="register()">Register</button>
+
+<button class="reset" onclick="resetForm()">Reset</button>
+
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function register(){
+
+let name=document.getElementById("name").value.trim();
+
+let email=document.getElementById("email").value.trim();
+
+let team=document.getElementById("team").value;
+
+let event=document.getElementById("event").value;
+
+if(name=="" || email=="" || team=="" || event==""){
+
+    alert("Please complete all the fields.");
+
+    return;
+
+}
+
+let id="CTF-"+Math.floor(1000+Math.random()*9000);
+
+let now=new Date();
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML=
+
+"<h2 class='success'>Registration Completed!</h2><br>"+
+
+"<b>Registration ID:</b> "+id+"<br><br>"+
+
+"<b>Name:</b> "+name+"<br>"+
+
+"<b>Email:</b> "+email+"<br>"+
+
+"<b>Team:</b> "+team+"<br>"+
+
+"<b>Event:</b> "+event+"<br>"+
+
+"<b>Date:</b> "+now.toLocaleString()+"<br><br>"+
+
+"<span style='color:#00e5ff;'>Welcome, "+name+
+"! Get ready to participate in the College Tech Fest.</span>";
+
+}
+
+function resetForm(){
+
+document.getElementById("name").value="";
+
+document.getElementById("email").value="";
+
+document.getElementById("team").selectedIndex=0;
+
+document.getElementById("event").selectedIndex=0;
+
+document.getElementById("result").style.display="none";
+
+}
+
+</script>
+
+</body>
+
+</html>
