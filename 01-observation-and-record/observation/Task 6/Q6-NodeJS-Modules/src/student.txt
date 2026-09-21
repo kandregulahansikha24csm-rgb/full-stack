@@ -1,5 +1,0 @@
-
-Student Name: Vijayasri
-Course: B.Tech CSE (AI & ML)
-Subject: Full Stack Web Development
-Topic: Node.js Modules

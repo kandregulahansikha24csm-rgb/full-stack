@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/kandregulahansikha24csm-rgb/full-stack/issues"
   },
-  "homepage": "https://github.com/kandregulahansikha24csm-rgb/full-stack#readme"
+  "homepage": "https://github.com/kandregulahansikha24csm-rgb/full-stack#readme",
+  "dependencies": {
+    "validator": "^13.15.35"
+  }
 }
